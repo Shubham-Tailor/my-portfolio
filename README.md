@@ -28,16 +28,15 @@ To run this project locally, follow the steps below:
 
 2. Navigate into the project directory:
    ```bash
-  cd your-repository-name
+   cd your-repository-name
 
 3. Install the dependencies:
    ```bash
-  npm install
+   npm install
 
 4. Start the development server:
-
    ```bash
-  npm run dev
+   npm run dev
   
 The app should now be running at http://localhost:3000.
 
