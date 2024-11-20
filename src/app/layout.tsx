@@ -25,6 +25,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Add the jQuery and Velocity.js CDN links */}
+        <script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          type="text/javascript"
+          async
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"
+          type="text/javascript"
+          async
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js"
+          type="text/javascript"
+          async
+        ></script>
+        <script 
+          src="/js/animations.js"
+          type="text/javascript"
+          async
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
