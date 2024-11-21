@@ -8,7 +8,7 @@ export default function Home() {
       <div className="overlay-navigation">
         <nav role="navigation">
           <ul>
-            <li><Link href="#home" data-content="The beginning">Home</Link></li>
+            <li><a href="#home" data-content="The beginning">Home</a></li>
             <li><Link href="#about" data-content="Curious?">About</Link></li>
             <li><Link href="/skills" data-content="I got game">Skills</Link></li>
             <li><Link href="#Works" data-content="Only the finest">Works</Link></li>
@@ -25,15 +25,8 @@ export default function Home() {
         </div>
       </section>
 
-        <div className="container">
-          <h2>Hi, I'm</h2>
-
-          <h1 data-value="SHUBHAM TAILOR"> SHUBHAM TAILOR</h1>
-
-          <p className="text-lg md:text-2xl text-gray-300">
-          Turning coffee into code, one pixel at a time.
-          </p>
-        </div>
+      <h2>Hi, I'm</h2>
+      <h1 data-value="SHUBHAM TAILOR"> SHUBHAM TAILOR</h1>
       
     </div>
   );

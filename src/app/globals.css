@@ -81,10 +81,10 @@ h1 {
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   margin: 0rem;
   text-align: center;
-  /* position: relative;
+  position: absolute;
   left: 50%;
   top: 50%;
-  translate: -50% -50%; */
+  translate: -50% -50%;
   z-index: 2;
 }
 
