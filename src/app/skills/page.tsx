@@ -11,7 +11,7 @@ export default function Skills() {
             <li><a href="#about" data-content="Curious?">About</a></li>
             <li><a href="#skills" data-content="I got game">Skills</a></li>
             <li><a href="#Works" data-content="Only the finest">Works</a></li>
-            <li><a href="#Contact" data-content="Don't hesitate">Contact</a></li>
+            <li><a href="https://shubham-tailor.github.io/Resume/" data-content="Click Me">Resume</a></li>
           </ul>
         </nav>
       </div>

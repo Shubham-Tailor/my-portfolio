@@ -12,7 +12,7 @@ export default function Home() {
             <li><Link href="#about" data-content="Curious?">About</Link></li>
             <li><Link href="/skills" data-content="I got game">Skills</Link></li>
             <li><Link href="#Works" data-content="Only the finest">Works</Link></li>
-            <li><Link href="#Contact" data-content="Don't hesitate">Contact</Link></li>
+            <li><Link href="https://shubham-tailor.github.io/Resume/" data-content="Click Me">Resume</Link></li>
           </ul>
         </nav>
       </div>
