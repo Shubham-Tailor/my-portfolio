@@ -27,20 +27,23 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Add the jQuery and Velocity.js CDN links */}
+        <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script"/>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js" as="script"/>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js" as="script"/>
         <script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
           type="text/javascript"
-          async
+          defer
         ></script>
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"
           type="text/javascript"
-          async
+          defer
         ></script>
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js"
           type="text/javascript"
-          async
+          defer
         ></script>
         <script 
           src="/js/animations.js"
