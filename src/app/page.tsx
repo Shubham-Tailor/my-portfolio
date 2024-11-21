@@ -2,10 +2,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div id="home" className="min-h-screen bg-black text-white flex justify-center items-center">
+    <div id="home">
       <div id="blob"></div>
       <div id="blur"></div>
-      <h1 data-value="SHUBHAM">SHUBHAM</h1>
       <div className="overlay-navigation">
         <nav role="navigation">
           <ul>
@@ -25,6 +24,17 @@ export default function Home() {
           <span className="bar-bottom"></span>
         </div>
       </section>
+
+        <div className="container">
+          <h2>Hi, I'm</h2>
+
+          <h1 data-value="SHUBHAM TAILOR"> SHUBHAM TAILOR</h1>
+
+          <p className="text-lg md:text-2xl text-gray-300">
+          Turning coffee into code, one pixel at a time.
+          </p>
+        </div>
+      
     </div>
   );
 }

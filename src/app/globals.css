@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 
 :root {
   --background: #ffffff;
@@ -19,13 +20,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-
-body {
   height: 100vh;
-  margin: 0rem;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 @keyframes rotate {
@@ -46,7 +42,7 @@ body {
   background-color: white;
   height: 34vmax;
   aspect-ratio: 1;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
@@ -55,14 +51,25 @@ body {
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: 2;
+  pointer-events: none; /* Prevent interaction with content */
 }
 
 #blur {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   backdrop-filter: blur(12vmax);
+  pointer-events: none; /* Prevent interaction with content */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -73,80 +80,37 @@ h1 {
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   margin: 0rem;
-  position: absolute;
+  text-align: center;
+  /* position: relative;
   left: 50%;
   top: 50%;
-  translate: -50% -50%;
-  z-index: 3;
+  translate: -50% -50%; */
+  z-index: 2;
 }
 
-/* -- Links -- */
-
-#links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  padding: 1rem;
-}
-
-.meta-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.meta-link > :is(span, a) {
-  font-family: "Rubik", sans-serif;
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
   color: white;
-}
-
-.meta-link > .label {
-  width: 100px; 
-  text-align: right;
-}
-
-.meta-link > a {
-  text-decoration: none;
-  outline: none;
-}
-
-.meta-link > a.source {
-  color: rgb(94, 106, 210);
-}
-
-.meta-link > a:is(:hover, :focus) > i {
-  color: white;  
-}
-
-.meta-link > a.youtube {
-  color: rgb(239, 83, 80);
-}
-
-.meta-link > a.youtube > i {
-  padding-top: 0.2rem; 
-}
-
-.meta-link > a > i {
-  height: 1rem;
-  line-height: 1rem;
+  white-space: nowrap;
+  text-align: center; /* Ensure the text is centered */
+  padding: 0 clamp(1rem, 2vw, 3rem);
+  margin: 0;
+  z-index: 2;
 }
 
 
+p {
+  position: relative;
+  z-index: 2;
+}
 
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 
 .home {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: black;
+  background-color: black; /*Main background color*/
 }
 
 
@@ -163,7 +127,7 @@ Navigation
   height: 100%;
   background-color: hsla(0, 10%, 31%, 0.2);
   display: none;
-  opacity: 0;
+  opacity: 0; 
 }
 
 nav,
@@ -269,23 +233,23 @@ nav li a:hover:after {
 }
 
 nav li:nth-of-type(1) {
-  background-color: #34495E
+  background-color: #95bfbb
 }
 
 nav li:nth-of-type(2) {
-  background-color: #E74C3C
+  background-color: #78cad2
 }
 
 nav li:nth-of-type(3) {
-  background-color: #F39C12
+  background-color: #62a8ac
 }
 
 nav li:nth-of-type(4) {
-  background-color: #16A085
+  background-color: #5497a7
 }
 
 nav li:nth-of-type(5) {
-  background-color: #8E44AD
+  background-color: #50858b
 }
 
 
@@ -294,21 +258,21 @@ Burger king
 ==================================== */
 
 .open-overlay {
-  position: absolute;
-  right: 5rem;
+  position: fixed;
   top: 3.2rem;
-  z-index: 100;
+  right: 5rem;
   width: 34px;
-  display: block;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   cursor: pointer;
 }
 
 .open-overlay span {
-  display: block;
   height: 1px;
-  background-color: #fff;
-  cursor: pointer;
-  margin-top: 8px;
+  background-color: white;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .animate-top-bar {
